@@ -25,5 +25,6 @@ hari_ini = dt.date.today()
 print(f"\nHari ini tanggal:  {hari_ini}")
 umur =  hari_ini - tanggalLahir
 umurTahun = umur.days // 365
+umurSisaBulan = (umur.days % 365) // 30
 print(f"Umur anda adalah: {umur}Hari")
-print(f"Umur anda adalah: {umurTahun} Tahun")
+print(f"Umur anda adalah: {umurTahun} Tahun, {umurSisaBulan} Bulan")
