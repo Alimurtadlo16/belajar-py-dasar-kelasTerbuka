@@ -22,7 +22,7 @@ print("Suhu dalam Reamur:", reamur, "R")
 kelvin = (5/9) * (fahrenheit - 32) + 273
 print("Suhu dalam Kelvin:", kelvin, "K")
 
-# Konversi reamur ke satuan lain
+# Konversi reamur ke satuan lain 
 print("\nKonversi Reamur ke satuan lain\n")
 reamur = float(input("Masukkan suhu dalam Reamur: "))
 print("Suhu dalam Reamur:", reamur, "R")
