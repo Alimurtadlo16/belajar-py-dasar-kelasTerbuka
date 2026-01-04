@@ -3,7 +3,7 @@
 manteman = {
     "Dam":"Adam",
     "Kar":"Karbit",
-    "sep":"Joseph",
+    "Sep":"Joseph",
     "Steve":"Steven",
     "Li":"Ali Murtadlo"
 }
@@ -14,12 +14,12 @@ manteman["sep"] = "Joseph ganteng"
 print(f"Teman teman: {manteman}\n")
 print(f"Friends:{friends}\n")
 
-# Pop dictionary
+# Pop dictionary (Berdasarkan keyc)
 dataAli = friends.pop("Li")
 print(f"Data ali: {dataAli}\n")
 print(f"Friends: {friends}\n")
 
-# Popitem dictionary
+# Popitem dictionary (Yang terakhir)
 dataTerakhir = friends.popitem()
 print(f"Data akhir: {dataTerakhir}\n")
 print(f"Friends: {friends}\n")
