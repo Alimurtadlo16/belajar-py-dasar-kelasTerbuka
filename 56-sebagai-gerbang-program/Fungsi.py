@@ -1,0 +1,1 @@
+print(f"Nilai name pada Fungsi.py: {__name__}")

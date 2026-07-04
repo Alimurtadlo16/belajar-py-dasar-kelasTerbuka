@@ -1,0 +1,1 @@
+data = "Dia adalah alumni gontor tahun 2025"

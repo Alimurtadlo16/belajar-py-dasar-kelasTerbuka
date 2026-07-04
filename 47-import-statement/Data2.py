@@ -1,0 +1,1 @@
+data2 = "Selamat datang di pembelajaran python"
