@@ -1,0 +1,1 @@
+print("Adalah mahasiswa jurusan teknik informatika")

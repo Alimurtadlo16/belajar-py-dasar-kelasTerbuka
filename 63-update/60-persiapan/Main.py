@@ -1,5 +1,4 @@
 import os
-import CRUD as CRUD
 
 # Fungsi untuk membersihkan layar terminal
 def clear_screen():
@@ -8,10 +7,9 @@ def clear_screen():
     else:
         os.system("cls")
 
-# Inisialisasi list untuk menampung data di memori
+# Inisialisasi list untuk menampung data
 daftar_buku = []
 
-CRUD.init_console()
 while True:
     clear_screen()
     print(15*"=", " PROGRAM PERPUSTAKAAN ", 15*"=")
@@ -30,36 +28,32 @@ while True:
         if not daftar_buku:
             print("Belum ada data buku.")
         else:
-            print(f"{'No':<3} | {'Judul':<20} | {'Penulis':<15} | {'Tahun':<5} | {'Penerbit':<15} ")
+            print(f"{'No':<3} | {'Judul':<20} | {'Penulis':<15} | {'Tahun':<5}")
             print("-" * 55)
             for index, buku in enumerate(daftar_buku, start=1):
-                print(f"{index:<3} | {buku['judul']:<20} | {buku['penulis']:<15} | {buku['tahun']:<5} | {buku['penerbit']:<15}")
-        input("\nTekan Enter untuk kembali ke menu...") 
+                print(f"{index:<3} | {buku['judul']:<20} | {buku['penulis']:<15} | {buku['tahun']:<5}")
+        input("\nTekan Enter untuk kembali ke menu...")
 
     elif pilihan == "2":
-        # MENU TAMBAH DATA  
+        # MENU TAMBAH DATA
         while True:
             clear_screen()
             print(15*"=", " INPUT BUKU ", 15*"=")
-            judul   = input("Judul   : ")
+            judul = input("Judul   : ")
             penulis = input("Penulis : ")
-            penerbit= input("Penerbit: ")
+            penerbit = input("Penerbit: ")
             try:
                 tahun = int(input("Tahun   : "))
             except ValueError:
                 print("Tahun harus angka! Set ke 0.")
                 tahun = 0
-
-            # Data di simpan ke memory (List)
+            
             daftar_buku.append({
                 "judul": judul,
                 "penulis": penulis,
-                "tahun": tahun,
                 "penerbit": penerbit,
+                "tahun": tahun
             })
-
-            # Data di simpan ke Database (File .txt) lewat file CRUD.py
-            CRUD.create(judul, penulis, penerbit, tahun,)
             
             lagi = input("\nTambah lagi? (y/n): ").lower()
             if lagi != 'y': break
